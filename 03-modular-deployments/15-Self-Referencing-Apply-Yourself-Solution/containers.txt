@@ -1,0 +1,3 @@
+grafana-dev-r1m9: 172.17.0.4:3100
+influxdb-dev-vdog: 172.17.0.2:8186
+nodered-dev-daf0: 172.17.0.3:1980
