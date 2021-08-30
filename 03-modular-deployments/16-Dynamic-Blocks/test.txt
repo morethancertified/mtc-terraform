@@ -1,3 +1,2 @@
-influxdb-prod-o0vq: 172.17.0.2:8086
-nodered-prod-v298: 172.17.0.4:1880
-grafana-prod-h74t: 172.17.0.3:3000
+grafana-prod-6w5i: 172.17.0.4:3000
+nodered-prod-hqsl: 172.17.0.3:1880

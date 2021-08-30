@@ -4,7 +4,7 @@ data "terraform_remote_state" "kubeconfig" {
   config = {
     organization = "derekops"
     workspaces = {
-      name = "mtc-dev"
+      name = "mtc-aws"
     }
   }
 }

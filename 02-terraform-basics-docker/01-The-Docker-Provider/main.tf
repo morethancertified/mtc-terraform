@@ -6,6 +6,4 @@ terraform {
   }
 }
 
-# download nodered image
-
 provider "docker" {}

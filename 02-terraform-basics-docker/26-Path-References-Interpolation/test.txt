@@ -1,0 +1,1 @@
+root: . cwd: /home/ubuntu/environment/mtc-terraform/02-terraform-basics-docker/26-Path-References-Interpolation

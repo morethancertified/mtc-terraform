@@ -28,6 +28,12 @@ resource "docker_container" "nodered_container" {
   }
 }
 
+resource "docker_container" "nodered" {
+  count = 1
+  image = "nodered/node-red"
+  name = "nodered-xxxx"
+}
+
 output "ip_address" {
   value       = [for i in docker_container.nodered_container[*] : join(":", [i.ip_address], i.ports[*]["external"])]
   description = "The IP address of the container"

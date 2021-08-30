@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     docker = {
-      source = "kreuzwerkers/docker"
+      source = "kreuzwerker/docker"
     }
   }
 }

@@ -7,5 +7,5 @@ terraform {
 }
 
 provider "kubernetes" {
-  config_path = "k3s-mtc_node-48315.yaml"
+  config_path = "k3s-mtc_node-48140.yaml"
 }

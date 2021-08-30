@@ -47,8 +47,8 @@ module "compute" {
   source              = "./compute"
   public_sg           = module.networking.public_sg
   public_subnets      = module.networking.public_subnets
-  instance_count      = 1
-  instance_type       = "t3.micro"
+  instance_count      = 2
+  instance_type       = "t2.micro"
   vol_size            = "20"
   public_key_path     = "/home/ubuntu/.ssh/mtckey.pub"
   key_name            = "mtckey"
