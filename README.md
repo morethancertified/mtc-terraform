@@ -1,7 +1,5 @@
 # More Than Certified - Terraform
 
-This repo will be moving soon. Pleasee be patient as the course is still in preview and I need to get things polished and cleaned up. More details to come! 
-
 ### How to use this repo
 
 git clone https://github.com/morethancertified/mtc-terraform.git
@@ -13,6 +11,6 @@ If you wish to start with the configuration used at the beginning of a lesson, u
 
 Don't forget to run a `terraform init` for each new directory you use! 
 
-For question, feel free to join the  `#terraform` channel in https://techstudyslack.com!
+For questions, please join the  `#mtc-terraform channel in https://chat.morethancertified.com/discord!
 
 ### Terraform Apply Yourself! ###
