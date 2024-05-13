@@ -21,7 +21,7 @@ resource "random_string" "random" {
 resource "docker_container" "nodered_container" {
   count = 2
   name  = join("-", ["nodered", random_string.random[count.index].result])
-  image = docker_image.nodered_image.latest
+  image = docker_image.nodered_image.name
   ports {
     internal = 1880
     # external = 1880
