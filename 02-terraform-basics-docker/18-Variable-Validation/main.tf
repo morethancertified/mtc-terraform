@@ -1,3 +1,5 @@
+# https://developer.hashicorp.com/terraform/language/values/variables#custom-validation-rules 
+
 terraform {
   required_providers {
     docker = {
@@ -37,6 +39,11 @@ variable "ext_port" {
   }
 }
 
+variable "container_count" {
+  type    = number
+  default = 2
+}
+
 
 # download nodered image
 
@@ -48,7 +55,7 @@ resource "docker_image" "nodered_image" {
 
 resource "docker_container" "nodered_container" {
   name  = var.container_name
-  image = docker_image.nodered_image.latest
+  image = docker_image.nodered_image.name
   ports {
     internal = var.int_port
     external = var.ext_port
@@ -57,9 +64,11 @@ resource "docker_container" "nodered_container" {
 
 #Output the IP Address of the Container
 output "ip-address" {
-  value = docker_container.nodered_container.ip_address
+  value = [for i in docker_container.nodered_container[*] :
+  join(":", [i.network_data[0].ip_address], i.ports[*]["external"])]
+  description = "The IP address of the container"
 }
 
 output "container-name" {
-  value = docker_container.nodered_container.name
+  value = docker_container.nodered_container[*].name
 }

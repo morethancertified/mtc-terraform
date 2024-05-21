@@ -13,5 +13,5 @@ variable "ext_port" {
 
 variable "container_count" {
   type    = number
-  default = 1
+  default = 1 
 }
